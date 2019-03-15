@@ -15,6 +15,9 @@ yarn add tailwind-bg-svg --dev
 ## Usage
 
 The Background svg plugin exposes options for you to use. The plugin will use your existing tailwind colors.
+It works by replacing "svgcolor" with the color code and base64 encoding the svg.
+Remember to set your fill/stroke to svgcolor
+
 Here is the example for adding it to your project plugins
 
 
