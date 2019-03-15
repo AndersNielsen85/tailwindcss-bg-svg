@@ -1,0 +1,28 @@
+{
+  "name": "tailwindcss-bg-svg",
+  "version": "1.0.0",
+  "description": "CSS svg injected background images plugin for tailwindcss framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndersNielsen85/tailwindcss-bg-svg.git"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "plugin",
+    "tailwindcss-plugin"
+  ],
+  "author": "Anders Nielsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndersNielsen85/tailwindcss-bg-svg/issues"
+  },
+  "homepage": "https://github.com/AndersNielsen85/tailwindcss-bg-svg#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
