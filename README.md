@@ -6,10 +6,10 @@ Add this plugin to your project:
 
 ```bash
 # Install via npm
-npm install --save-dev https://github.com/AndersNielsen85/tailwindcss-bg-svg
+npm install --save-dev tailwindcss-bg-svg
 
 # or yarn
-yarn add https://github.com/AndersNielsen85/tailwindcss-bg-svg --dev
+yarn add tailwindcss-bg-svg --dev
 ```
 
 ## Usage
