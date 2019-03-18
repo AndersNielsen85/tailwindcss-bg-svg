@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-bg-svg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CSS svg injected background images plugin for tailwindcss framework",
   "main": "index.js",
   "scripts": {
