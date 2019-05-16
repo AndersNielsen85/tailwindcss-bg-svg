@@ -1,5 +1,8 @@
 # Background svg Tailwind Plugin
 
+## Tailwind pre 1.0.0
+Use version 1.0.2 with any tailwind pre 1.0.0
+
 ## Installation
 
 Add this plugin to your project:
