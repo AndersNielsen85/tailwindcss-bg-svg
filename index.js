@@ -6,10 +6,10 @@ module.exports = ({
   },
   variants = ['responsive', 'hover'],
 }) => {
-  return ({ e, addUtilities, config }) => {
+  return ({ e, addUtilities, theme }) => {
     addUtilities([
       ..._.map(icons, (svg, svg_name) => {
-        let colors = config('colors');
+        let colors = theme('colors');
         return _.map(colors, (color, color_name) => {
           let svg64 = encodeURIComponent(svg.replace(/svgcolor/g, color));
           return {
