@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const _flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette");
 
 module.exports = ({
   icons = {
@@ -8,12 +9,11 @@ module.exports = ({
 }) => {
   return ({ e, addUtilities, theme }) => {
     addUtilities([
-      ..._.map(icons, (svg, svg_name) => {
-        let colors = theme('colors');
-        return _.map(colors, (color, color_name) => {
-          let svg64 = encodeURIComponent(svg.replace(/svgcolor/g, color));
+      ..._.map((0, _flattenColorPalette.default)(theme('colors')), (value, modifier) => {
+        return _.map(icons, (svg, svg_name) => {
+          let svg64 = encodeURIComponent(svg.replace(/svgcolor/g, value));
           return {
-            [`.${e(`bg-svg-${svg_name}-${color_name}`)}`]: {
+            [`.${e(`bg-svg-${svg_name}-${modifier}`)}`]: {
               ['background-image']: 'url("data:image/svg+xml,' + svg64 + '")',
             },
           }
