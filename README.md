@@ -1,7 +1,12 @@
 # Background svg Tailwind Plugin
 
-## Tailwind pre 1.0.0
-Use version 1.0.2 with any tailwind pre 1.0.0
+## V2 breaking change
+The configuration has been moved from plugin to utility.
+This should allow for on-the-fly adding icons with HMR.
+
+If you are coming from pre v2 you will need to move your configuration.
+
+[Looking for the the V1 documentation?](https://github.com/AndersNielsen85/tailwindcss-bg-svg/tree/v1)
 
 ## Installation
 
@@ -21,8 +26,7 @@ The Background svg plugin exposes options for you to use. The plugin will use yo
 It works by replacing "svgcolor" with the color code and base64 encoding the svg.
 Remember to set your fill/stroke to svgcolor
 
-Here is the example for adding it to your project plugins
-
+Example code for using the plugin.
 
 ```js
 let colors = {
@@ -33,12 +37,15 @@ let colors = {
 }
 
 module.exports = {
-  plugins: [
-    require('tailwindcss-bg-svg')({
-      icons: {
+  theme: {
+    bgSvg: {
         'arrow': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.04 12.37"><path d="M.5,6.19H14.35" fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8.86 0.5 14.54 6.19 8.86 11.87" fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-      }
-    }),
+    }
+    // ...
+  },
+  plugins: [
+    require('tailwindcss-bg-svg'),
+    // ...
   ],
 }
 ```

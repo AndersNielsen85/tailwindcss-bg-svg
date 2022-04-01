@@ -1,15 +1,10 @@
 {
   "name": "tailwindcss-bg-svg",
-  "version": "1.0.4",
+  "version": "2.0.0-rc1",
   "description": "CSS svg injected background images plugin for tailwindcss framework",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AndersNielsen85/tailwindcss-bg-svg.git"
-  },
+  "main": "src/index.js",
+  "license": "MIT",
+  "repository": "https://github.com/AndersNielsen85/tailwindcss-bg-svg",
   "keywords": [
     "tailwind",
     "tailwindcss",
@@ -17,11 +12,31 @@
     "tailwindcss-plugin"
   ],
   "author": "Anders Nielsen",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AndersNielsen85/tailwindcss-bg-svg/issues"
   },
   "homepage": "https://github.com/AndersNielsen85/tailwindcss-bg-svg#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "scripts": {
+    "prepublishOnly": "node scripts/build.js"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=2.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.0",
+    "clean-css": "^4.2.1",
+    "postcss": "^8.2.2",
+    "tailwindcss": "^2.0.2"
+  },
   "dependencies": {
     "lodash": "^4.17.10"
   }
